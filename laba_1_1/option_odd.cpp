@@ -1,9 +1,7 @@
 #include <iostream>
 #include <string>
 
-// ================= Задание 1 =================
 
-// 1.2 Сумма знаков
 int sumLastNums(int x) {
     if (x < 0) x = -x;
     int last = x % 10;
@@ -11,48 +9,39 @@ int sumLastNums(int x) {
     return last + prev;
 }
 
-// 1.4 Есть ли позитив
 bool isPositive(int x) {
     return x > 0;
 }
 
-// 1.6 Большая буква
 bool isUpperCase(char x) {
     return x >= 'A' && x <= 'Z';
 }
 
-// 1.8 Делитель
 bool isDivisor(int a, int b) {
     if (a == 0 || b == 0) return false;
     return (a % b == 0) || (b % a == 0);
 }
 
-// 1.10 Многократный вызов
 int lastNumSum(int a, int b) {
     return (a % 10) + (b % 10);
 }
 
-// ================= Задание 2 =================
 
-// 2.2 Безопасное деление
 double safeDiv(int x, int y) {
     if (y == 0) return 0;
     return (double)x / y;
 }
 
-// 2.4 Строка сравнения
 std::string makeDecision(int x, int y) {
     if (x < y) return std::to_string(x) + " < " + std::to_string(y);
     if (x > y) return std::to_string(x) + " > " + std::to_string(y);
     return std::to_string(x) + " == " + std::to_string(y);
 }
 
-// 2.6 Тройная сумма
 bool sum3(int x, int y, int z) {
     return (x + y == z) || (x + z == y) || (y + z == x);
 }
 
-// 2.8 Возраст
 std::string age(int x) {
     int last2 = x % 100;
     int last1 = x % 10;
@@ -64,7 +53,6 @@ std::string age(int x) {
     return std::to_string(x) + " " + word;
 }
 
-// 2.10 Вывод дней недели
 void printDays(int x) {
     switch (x) {
         case 1: std::cout << "Понедельник\n";
@@ -78,9 +66,6 @@ void printDays(int x) {
     }
 }
 
-// ================= Задание 3 =================
-
-// 3.2 Числа наоборот
 std::string reverseListNums(int x) {
     std::string res;
     for (int i = x; i >= 0; i--) {
@@ -90,14 +75,12 @@ std::string reverseListNums(int x) {
     return res;
 }
 
-// 3.4 Степень числа
 int powInt(int x, int y) {
     int result = 1;
     for (int i = 0; i < y; i++) result *= x;
     return result;
 }
 
-// 3.6 Одинаковость
 bool equalNum(int x) {
     if (x < 0) x = -x;
     int digit = x % 10;
@@ -109,7 +92,6 @@ bool equalNum(int x) {
     return true;
 }
 
-// 3.8 Левый треугольник
 void leftTriangle(int x) {
     for (int i = 1; i <= x; i++) {
         for (int j = 0; j < i; j++) std::cout << "*";
@@ -117,7 +99,6 @@ void leftTriangle(int x) {
     }
 }
 
-// 3.10 Угадайка
 void guessGame() {
     int secret = 5;
     int attempts = 0;
@@ -132,16 +113,12 @@ void guessGame() {
     std::cout << "Вы отгадали число за " << attempts << " попытки\n";
 }
 
-// ================= Задание 4 =================
-
-// 4.2 Поиск последнего значения
 int findLast(int arr[], int size, int x) {
     int idx = -1;
     for (int i = 0; i < size; i++) if (arr[i] == x) idx = i;
     return idx;
 }
 
-// 4.4 Добавление в массив
 int* addOne(int arr[], int sizeArr, int x, int pos) {
     if (pos < 0) pos = 0;
     if (pos > sizeArr) pos = sizeArr;
@@ -152,7 +129,6 @@ int* addOne(int arr[], int sizeArr, int x, int pos) {
     return result;
 }
 
-// 4.6 Реверс
 void reverse(int arr[], int size) {
     for (int i = 0; i < size / 2; i++) {
         int t = arr[i];
@@ -161,7 +137,6 @@ void reverse(int arr[], int size) {
     }
 }
 
-// 4.8 Объединение
 int* concat(int arr1[], int size1, int arr2[], int size2) {
     int* result = new int[size1 + size2];
     for (int i = 0; i < size1; i++) result[i] = arr1[i];
@@ -169,7 +144,6 @@ int* concat(int arr1[], int size1, int arr2[], int size2) {
     return result;
 }
 
-// 4.10 Удалить негатив
 int* deleteNegative(int arr[], int size, int& newSize) {
     int count = 0;
     for (int i = 0; i < size; i++) if (arr[i] >= 0) count++;
@@ -180,7 +154,6 @@ int* deleteNegative(int arr[], int size, int& newSize) {
     return result;
 }
 
-// ================= main =================
 int main() {
     int choice;
     do {
