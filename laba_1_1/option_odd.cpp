@@ -285,7 +285,9 @@ int main() {
                 break;
             }
             case 16: {
-                int arr[100], n, x;
+                int arr[100]; 
+                int n = 0; 
+                int x = 0;
                 std::cout << "n (1..100): ";
                 std::cin >> n;
                 while (!std::cin || n < 1 || n > 100) { std::cout << "1..100: "; std::cin.clear(); std::cin.ignore(10000,'\n'); std::cin >> n; }
@@ -296,7 +298,10 @@ int main() {
                 break;
             }
             case 17: {
-                int arr[100], n, x, pos;
+                int arr[100]; 
+                int n = 0;
+                int x = 0; 
+                int pos = 0;
                 std::cout << "n (1..100): ";
                 std::cin >> n;
                 while (!std::cin || n < 1 || n > 100) { std::cout << "1..100: "; std::cin.clear(); std::cin.ignore(10000,'\n'); std::cin >> n; }
@@ -310,7 +315,8 @@ int main() {
                 break;
             }
             case 18: {
-                int arr[100], n;
+                int arr[100];
+                int n = 0;
                 std::cout << "n: "; std::cin >> n;
                 while (!std::cin || n<1 || n>100){std::cout<<"1..100: ";std::cin.clear();std::cin.ignore(10000,'\n');std::cin>>n;}
                 for (int i=0;i<n;i++){ std::cout<<"arr["<<i<<"]="; while(!(std::cin>>arr[i])){std::cin.clear();std::cin.ignore(10000,'\n');} }
@@ -320,7 +326,10 @@ int main() {
                 break;
             }
             case 19: {
-                int a1[100], a2[100], n1, n2;
+                int a1[100];
+                int a2[100];
+                int n1 = 0; 
+                int n2 = 0;
                 std::cout << "n1: "; std::cin >> n1;
                 while (!std::cin || n1<1 || n1>100){std::cout<<"1..100: ";std::cin.clear();std::cin.ignore(10000,'\n');std::cin>>n1;}
                 for (int i=0;i<n1;i++){ std::cout<<"arr1["<<i<<"]="; while(!(std::cin>>a1[i])){std::cin.clear();std::cin.ignore(10000,'\n');} }
@@ -334,7 +343,8 @@ int main() {
                 break;
             }
             case 20: {
-                int arr[100], n;
+                int arr[100];
+                int n = 0;
                 std::cout << "n: "; std::cin >> n;
                 while (!std::cin || n<1 || n>100){std::cout<<"1..100: ";std::cin.clear();std::cin.ignore(10000,'\n');std::cin>>n;}
                 for (int i=0;i<n;i++){ std::cout<<"arr["<<i<<"]="; while(!(std::cin>>arr[i])){std::cin.clear();std::cin.ignore(10000,'\n');} }
