@@ -1,47 +1,37 @@
 #include <iostream>
 #include <string>
 
-
 int sumLastNums(int x) {
     if (x < 0) x = -x;
     int last = x % 10;
     int prev = (x / 10) % 10;
     return last + prev;
 }
-
 bool isPositive(int x) {
     return x > 0;
 }
-
 bool isUpperCase(char x) {
     return x >= 'A' && x <= 'Z';
 }
-
 bool isDivisor(int a, int b) {
     if (a == 0 || b == 0) return false;
     return (a % b == 0) || (b % a == 0);
 }
-
 int lastNumSum(int a, int b) {
     return (a % 10) + (b % 10);
 }
-
-
 double safeDiv(int x, int y) {
     if (y == 0) return 0;
     return (double)x / y;
 }
-
 std::string makeDecision(int x, int y) {
     if (x < y) return std::to_string(x) + " < " + std::to_string(y);
     if (x > y) return std::to_string(x) + " > " + std::to_string(y);
     return std::to_string(x) + " == " + std::to_string(y);
 }
-
 bool sum3(int x, int y, int z) {
     return (x + y == z) || (x + z == y) || (y + z == x);
 }
-
 std::string age(int x) {
     int last2 = x % 100;
     int last1 = x % 10;
@@ -52,7 +42,6 @@ std::string age(int x) {
     else word = "лет";
     return std::to_string(x) + " " + word;
 }
-
 void printDays(int x) {
     switch (x) {
         case 1: std::cout << "Понедельник\n";
@@ -65,7 +54,6 @@ void printDays(int x) {
         default: std::cout << "это не день недели\n";
     }
 }
-
 std::string reverseListNums(int x) {
     std::string res;
     for (int i = x; i >= 0; i--) {
@@ -74,13 +62,11 @@ std::string reverseListNums(int x) {
     }
     return res;
 }
-
 int powInt(int x, int y) {
     int result = 1;
     for (int i = 0; i < y; i++) result *= x;
     return result;
 }
-
 bool equalNum(int x) {
     if (x < 0) x = -x;
     int digit = x % 10;
@@ -91,14 +77,12 @@ bool equalNum(int x) {
     }
     return true;
 }
-
 void leftTriangle(int x) {
     for (int i = 1; i <= x; i++) {
         for (int j = 0; j < i; j++) std::cout << "*";
         std::cout << "\n";
     }
 }
-
 void guessGame() {
     int secret = 5;
     int attempts = 0;
@@ -112,13 +96,11 @@ void guessGame() {
     std::cout << "Вы угадали!\n";
     std::cout << "Вы отгадали число за " << attempts << " попытки\n";
 }
-
 int findLast(int arr[], int size, int x) {
     int idx = -1;
     for (int i = 0; i < size; i++) if (arr[i] == x) idx = i;
     return idx;
 }
-
 int* addOne(int arr[], int sizeArr, int x, int pos) {
     if (pos < 0) pos = 0;
     if (pos > sizeArr) pos = sizeArr;
@@ -128,7 +110,6 @@ int* addOne(int arr[], int sizeArr, int x, int pos) {
     for (int i = pos; i < sizeArr; i++) result[i + 1] = arr[i];
     return result;
 }
-
 void reverse(int arr[], int size) {
     for (int i = 0; i < size / 2; i++) {
         int t = arr[i];
@@ -136,14 +117,12 @@ void reverse(int arr[], int size) {
         arr[size - 1 - i] = t;
     }
 }
-
 int* concat(int arr1[], int size1, int arr2[], int size2) {
     int* result = new int[size1 + size2];
     for (int i = 0; i < size1; i++) result[i] = arr1[i];
     for (int i = 0; i < size2; i++) result[size1 + i] = arr2[i];
     return result;
 }
-
 int* deleteNegative(int arr[], int size, int& newSize) {
     int count = 0;
     for (int i = 0; i < size; i++) if (arr[i] >= 0) count++;
@@ -153,7 +132,6 @@ int* deleteNegative(int arr[], int size, int& newSize) {
     newSize = count;
     return result;
 }
-
 int main() {
     int choice;
     do {
@@ -190,21 +168,21 @@ int main() {
 
         switch (choice) {
             case 1: {
-                int x;
+                int x = 0;
                 std::cout << "x: ";
                 if (std::cin >> x) { std::cin.ignore(10000,'\n'); std::cout << "Результат: " << sumLastNums(x) << "\n"; }
                 else { std::cin.clear(); std::cin.ignore(10000,'\n'); std::cout << "Ошибка ввода\n"; }
                 break;
             }
             case 2: {
-                int x;
+                int x = 0;
                 std::cout << "x: ";
                 if (std::cin >> x) { std::cin.ignore(10000,'\n'); std::cout << std::boolalpha << isPositive(x) << "\n"; }
                 else { std::cin.clear(); std::cin.ignore(10000,'\n'); std::cout << "Ошибка ввода\n"; }
                 break;
             }
             case 3: {
-                char x;
+                char x = 0;
                 std::cout << "Символ: ";
                 std::cin >> x;
                 std::cin.ignore(10000,'\n');
@@ -212,7 +190,8 @@ int main() {
                 break;
             }
             case 4: {
-                int a, b;
+                int a = 0;
+                int b = 0;
                 std::cout << "a b: ";
                 if (std::cin >> a >> b) { std::cin.ignore(10000,'\n'); std::cout << std::boolalpha << isDivisor(a,b) << "\n"; }
                 else { std::cin.clear(); std::cin.ignore(10000,'\n'); std::cout << "Ошибка ввода\n"; }
@@ -231,63 +210,68 @@ int main() {
                 break;
             }
             case 6: {
-                int x, y;
+                int x = 0;
+                int y = 0;
                 std::cout << "x y: ";
                 if (std::cin >> x >> y) { std::cin.ignore(10000,'\n'); std::cout << "Результат: " << safeDiv(x,y) << "\n"; }
                 else { std::cin.clear(); std::cin.ignore(10000,'\n'); std::cout << "Ошибка ввода\n"; }
                 break;
             }
             case 7: {
-                int x, y;
+                int x = 0;
+                int y = 0;
                 std::cout << "x y: ";
                 if (std::cin >> x >> y) { std::cin.ignore(10000,'\n'); std::cout << makeDecision(x,y) << "\n"; }
                 else { std::cin.clear(); std::cin.ignore(10000,'\n'); std::cout << "Ошибка ввода\n"; }
                 break;
             }
             case 8: {
-                int x, y, z;
+                int x = 0;
+                int y = 0;
+                int z = 0;
                 std::cout << "x y z: ";
                 if (std::cin >> x >> y >> z) { std::cin.ignore(10000,'\n'); std::cout << std::boolalpha << sum3(x,y,z) << "\n"; }
                 else { std::cin.clear(); std::cin.ignore(10000,'\n'); std::cout << "Ошибка ввода\n"; }
                 break;
             }
             case 9: {
-                int x;
+                int x = 0;
                 std::cout << "x: ";
                 if (std::cin >> x) { std::cin.ignore(10000,'\n'); std::cout << age(x) << "\n"; }
                 else { std::cin.clear(); std::cin.ignore(10000,'\n'); std::cout << "Ошибка ввода\n"; }
                 break;
             }
             case 10: {
-                int x;
+                int x = 0;
                 std::cout << "x: ";
                 if (std::cin >> x) { std::cin.ignore(10000,'\n'); printDays(x); }
                 else { std::cin.clear(); std::cin.ignore(10000,'\n'); std::cout << "Ошибка ввода\n"; }
                 break;
             }
             case 11: {
-                int x;
+                int x = 0;
                 std::cout << "x: ";
                 if (std::cin >> x && x >= 0) { std::cin.ignore(10000,'\n'); std::cout << reverseListNums(x) << "\n"; }
                 else { std::cin.clear(); std::cin.ignore(10000,'\n'); std::cout << "Нужно x >= 0\n"; }
                 break;
             }
             case 12: {
-                int x, y;
+                int x = 0;
+                int y = 0;
                 std::cout << "x y: ";
                 if (std::cin >> x >> y && y >= 0) { std::cin.ignore(10000,'\n'); std::cout << "Результат: " << powInt(x,y) << "\n"; }
                 else { std::cin.clear(); std::cin.ignore(10000,'\n'); std::cout << "Нужно y >= 0\n"; }
                 break;
             }
             case 13: {
-                int x;
+                int x = 0;
                 std::cout << "x: ";
                 if (std::cin >> x) { std::cin.ignore(10000,'\n'); std::cout << std::boolalpha << equalNum(x) << "\n"; }
                 else { std::cin.clear(); std::cin.ignore(10000,'\n'); std::cout << "Ошибка ввода\n"; }
                 break;
             }
             case 14: {
-                int x;
+                int x = 0;
                 std::cout << "x: ";
                 if (std::cin >> x) {
                     std::cin.ignore(10000,'\n');
